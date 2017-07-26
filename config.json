@@ -16,8 +16,8 @@
   "portalUrl": "https://gis.exp.com/exp_portal",
   "appId": "",
   "authorizedCrossOriginDomains": [],
-  "title": "Keystone XL",
-  "subtitle": "with Web AppBuilder for ArcGIS",
+  "title": "",
+  "subtitle": "",
   "keepAppState": true,
   "logo": "images/app-logo.png",
   "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
@@ -30,7 +30,7 @@
           "left": 0,
           "top": 0,
           "right": 0,
-          "height": 40,
+          "height": 60,
           "relativeTo": "browser"
         },
         "version": "2.5",
@@ -276,7 +276,7 @@
     "2D": true,
     "position": {
       "left": 0,
-      "top": 40,
+      "top": 60,
       "right": 0,
       "bottom": 0
     },
