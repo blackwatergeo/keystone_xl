@@ -1,0 +1,10 @@
+{
+  "splash": {
+    "splashContent": "<div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\">What's New</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-21</b> Upgraded to new web mapping infrastructure</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Save Session State Widget Addition</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Shared Sketches from Editing Site</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-12</b>  Added Alignment Sheets</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-06-28</b> Added PennWell and Rextag Oil/Gas and Electric Datasets to Reference Data</font></div><div style=\"text-align: center;\"><font size=\"4\"><br /></font></div>",
+    "requireConfirm": false,
+    "confirmText": "",
+    "showOption": false,
+    "confirmEverytime": true,
+    "backgroundColor": "#ffffff"
+  }
+}

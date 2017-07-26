@@ -1,0 +1,8 @@
+{
+  "serviceURL": "https://gis.exp.com/exp/rest/services/keystone_xl/keystone_xl_print/GPServer/Export%20Web%20Map",
+  "defaultTitle": "ArcGIS Web Map",
+  "defaultAuthor": "Web AppBuilder for ArcGIS",
+  "defaultCopyright": "",
+  "defaultFormat": "PDF",
+  "defaultLayout": "Portrait_11X17"
+}
