@@ -75,6 +75,52 @@ define([
       return '<a class="menu-item-description" target="_blank" href="' +
         url + '">' + label + '</a>';
     },
+	
+	_getMetaLabel: function() {  
+					   
+		var href = location.href.split('/');
+		var host = href[0];
+		var server = href[2];
+		var app = href[3];
+		var url = host + '//' + server + '/';
+		var fcPath = [];
+		
+		if (this._layerInfo.isRootLayer() != true && this._layerInfo.parentLayerInfo.isRootLayer() != true) {    
+			var parentID = this._layerInfo.parentLayerInfo.id;
+			fcPath.unshift(this._layerInfo.title);
+			fcPath.unshift(this._layerInfo.parentLayerInfo.title);
+			
+			while (this.layerListWidget.operLayerInfos.getLayerInfoById(parentID).parentLayerInfo.isRootLayer() === false) {
+				fcPath.unshift(this.layerListWidget.operLayerInfos.getLayerInfoById(parentID).parentLayerInfo.title);
+				var nextParentID = this.layerListWidget.operLayerInfos.getLayerInfoById(parentID).parentLayerInfo.id;
+				parentID = nextParentID;
+			}
+			
+			var fcPathUrl;
+			var inum = 0;
+			fcPath.forEach(function(item){
+				if (inum === 0) {
+					fcPathUrl = item;
+				}
+				else {
+					fcPathUrl = fcPathUrl + 'xyz' + item;
+				}
+				inum = inum + 1;
+				
+			});
+			
+			fcPathUrl = fcPathUrl.replace(/&/gi, "zzz");
+			
+			return '<a class="menu-item-description" target="_blank" href="' + url + 'viewmetadata/?FC=' + fcPathUrl + '&Proj=' + app + '&Cfg=' + app + '">Metadata</a>';
+		}
+		else{
+			fcPathUrl = this._layerInfo.title.replace(/&/gi, "zzz");
+			return '<a class="menu-item-description" target="_blank" href="' + url + 'viewmetadata/?FC=' + fcPathUrl + '&Proj=' + app + '&Cfg=' + app + '">Metadata</a>';
+		};
+	},	
+	
+	
+	
 
     _getItemDetailsPageUrl: function() {
       var itemUrl = "";
@@ -126,7 +172,10 @@ define([
       }, {
         key: 'url',
         label: this._getATagLabel()
-      }];
+      }, {
+		key: 'meta',
+		label: this._getMetaLabel()
+	  }];
     },
 
     _initDisplayItems: function(displayItemInfos) {
@@ -469,7 +518,9 @@ define([
         key: 'separator'
       }, {
         key: 'url'
-      }],
+      }, {
+		key: 'meta'
+	  }],
       'GroupLayer': [{
         key: 'url'
       }],

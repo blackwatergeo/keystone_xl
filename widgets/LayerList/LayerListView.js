@@ -39,7 +39,9 @@ define([
     _currentSelectedLayerRowNode: null,
     operationsDropMenu: null,
     _layerNodeHandles: null,
-
+//Added RJS
+        _map: null,
+//end add
     postMixInProperties: function() {
       this.inherited(arguments);
       this.nls = NlsStrings.value;
@@ -47,6 +49,10 @@ define([
     },
 
     postCreate: function() {
+  //Added RJS
+      this._map = this.layerListWidget.map;
+      this.own(on(this._map, 'zoom-end', lang.hitch(this, this.checkScale)));
+//end add
       array.forEach(this.operLayerInfos.getLayerInfoArray(), function(layerInfo) {
         this.drawListNode(layerInfo, 0, this.layerListTable);
       }, this);
@@ -56,6 +62,44 @@ define([
       }, this);
       this._initOperations();
     },
+      
+     //Added RJS
+    startup: function () {
+      this.checkScale();
+    },
+
+    checkScale: function(){
+      setTimeout(lang.hitch(this, function(){
+        array.forEach(this.operLayerInfos.getLayerInfoArray(), function(layerInfo) {
+          var titleNodes = query(".div-content.jimu-float-leading");
+          for(var x = 0; x < titleNodes.length; x++){
+            
+            if(layerInfo.layerObject.layerInfos){
+              for(var l = 0; l < layerInfo.layerObject.layerInfos.length; l++){
+                if(layerInfo.layerObject.layerInfos[l].name === titleNodes[x].innerHTML){
+                  var node = query(".checkbox", titleNodes[x].parentNode.parentNode)[0];
+                  if(domClass.contains(titleNodes[x], "grayed-title")){
+                    domClass.add(node, "sd");
+                  }else{
+                    domClass.remove(node, "sd");
+                  }
+                }
+              }
+            }
+            if(titleNodes[x].innerHTML === layerInfo.title){
+              var node = query(".checkbox", titleNodes[x].parentNode.parentNode)[0];
+              if(domClass.contains(titleNodes[x], "grayed-title")){
+                domClass.add(node, "sd");
+              }else{
+                domClass.remove(node, "sd");
+              }
+            }
+          }
+        }, this);
+      }), 200);
+    },
+//end add
+ 
 
     drawListNode: function(layerInfo, level, toTableNode, position) {
       var nodeAndSubNode, showLegendDiv;
@@ -174,9 +218,25 @@ define([
 
       //domStyle.set(divLabel, 'width', 263 - level*13 + 'px');
 
-      layerTdNode = domConstruct.create('td', {
+	  //exp remove
+      /*layerTdNode = domConstruct.create('td', {
         'class': 'col col3'
-      }, layerTrNode);
+      }, layerTrNode);*/
+	  //exp end remove
+	  
+	  //exp add
+	  if (layerInfo.parentLayerInfo === null || layerInfo.newSubLayers.length === 0) {
+		  layerTdNode = domConstruct.create('td', {
+		  	  'class': 'col col3'
+		  }, layerTrNode);
+	  } else {
+		  layerTdNode = domConstruct.create('td', {
+			  'class': 'col col3',
+			  'style': 'display: none',
+			  'width': '0'
+		  }, layerTrNode);                            
+	  };
+	  //exp end
 
       var popupMenuDisplayStyle = this.hasContentMenu() ? "display: block" : "display: none";
       // add popupMenu
