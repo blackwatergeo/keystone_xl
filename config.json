@@ -241,7 +241,19 @@
       "bottom": 0
     },
     "itemId": "409829887d4e4cc89af24141414286bd",
-    "mapOptions": {},
+    "mapOptions": {
+            "extent": {
+                "xmin": -13200980.532959644,
+                "ymin": 4688311.97507203,
+                "xmax": -9443947.718687657,
+                "ymax": 6420069.287900524,
+                "spatialReference": {
+                    "wkid": 102100
+                }
+
+            }
+
+        },
     "id": "map",
     "portalUrl": "https://gis.exp.com/exp_portal"
   },
