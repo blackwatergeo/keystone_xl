@@ -47,7 +47,8 @@ define([
         "EnableOrDisablePopup": "controlPopup",
         "MoveupOrMovedown": "moveup movedown",
         "OpenAttributeTable": "table",
-        "DescriptionOrShowItemDetailsOrDownload": "url"
+        "DescriptionOrShowItemDetailsOrDownload": "url",
+		"Metadata": "meta"
       };
       this._deniedItems = [];
       this._deniedItemsFromConfig = [];

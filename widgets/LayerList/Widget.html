@@ -1,4 +1,15 @@
 <div>
+  <div class="jimu-r-row exp-layerSearch-section">
+      <input class="jimu-input exp-layerSearch-input" data-dojo-attach-point="filterTextBox" type="text" placeholder="search layers">
+      <div class="exp-layerSearch-btn" data-dojo-attach-point="expLayerSearchBtn" data-dojo-attach-event="onclick:_onFilterClicked2" title="search">
+          <div class="jimu-center-img"></div>
+      </div>
+      <div class="exp-layerSearch-reset-btn" data-dojo-attach-point="filterResetBtn" data-dojo-attach-event="onclick:_resetFilter" title="remove filter">
+          <div class="jimu-center-img"></div>
+      </div>
+  </div>
+  <div data-dojo-attach-point="expFoundLayerMsg" style="display:none;padding:5px 0 0 5px;color:#CD5C5C;"> </div> 
+  <br />
   <div class="layers-section" data-dojo-attach-point="layersSection">
     <div class="layer-list-title">${nls.titleLayers}</div>
     <div class="layer-list-body" data-dojo-attach-point="layerListBody">
