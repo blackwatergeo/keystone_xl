@@ -1,0 +1,370 @@
+{
+  "layers": [
+    {
+      "name": "Mile Post Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/0",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "Search by Mile Post",
+            "textsearchlabel": "",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "MILEPOST",
+                    "label": "MILEPOST",
+                    "shortType": "number",
+                    "type": "esriFieldTypeDouble"
+                  },
+                  "valueObj": {
+                    "value": 1
+                  },
+                  "prompt": "Enter or Select Mile Post",
+                  "textsearchhint": "34",
+                  "sqltext": "MILEPOST = [value]",
+                  "operation": "numberOperatorIs",
+                  "uniquevalsfromfield": "MILEPOST",
+                  "required": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "MILEPOST",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "MILEPOST",
+            "alias": "MILEPOST",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "CL_ID",
+            "alias": "CL_ID",
+            "popuponly": true
+          },
+          {
+            "name": "STATION",
+            "alias": "STATION",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 30,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        }
+      }
+    },
+    {
+      "name": "Property Parcels Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/2",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "Search by Owner Name",
+            "textsearchlabel": "Search by owner name OR tract number",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "OWNER",
+                    "label": "OWNER",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Enter Owner Name:",
+                  "textsearchhint": "'James' or 'Smith' or 'James Smith'",
+                  "sqltext": "Upper(OWNER) LIKE Upper('%[value]%')",
+                  "operation": "stringOperatorContains"
+                },
+                {
+                  "fieldObj": {
+                    "name": "PRJTRACTNO",
+                    "label": "PRJTRACTNO",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Select Project Number",
+                  "textsearchhint": "ML-MT-DA-00303.000",
+                  "sqltext": "PRJTRACTNO = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "PRJTRACTNO",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "OWNER",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "PRJTRACTNO",
+            "alias": "PRJTRACTNO"
+          },
+          {
+            "name": "OWNER",
+            "alias": "OWNER"
+          },
+          {
+            "name": "CLASS",
+            "alias": "CLASS"
+          },
+          {
+            "name": "ROW_IMPACT",
+            "alias": "ROW_IMPACT"
+          },
+          {
+            "name": "COUNTY",
+            "alias": "CO"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS"
+          },
+          {
+            "name": "PERMISSION_STATUS",
+            "alias": "PERM_STATUS"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "autozoomtoresults": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 2.25,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    }
+  ],
+  "initialView": "text",
+  "selectfilter": "contains",
+  "enablePopupsOnResultClick": false,
+  "disablePopups": false,
+  "disableuvcache": false,
+  "exportsearchurlchecked": false,
+  "limitsearch2mapextentchecked": false,
+  "autozoomtoresults": true,
+  "mouseovergraphics": true,
+  "bufferDefaults": {
+    "addtolegend": false,
+    "bufferUnits": {
+      "bufferUnit": [
+        {
+          "name": "UNIT_FOOT",
+          "label": "Feet"
+        },
+        {
+          "name": "UNIT_STATUTE_MILE",
+          "label": "Miles"
+        },
+        {
+          "name": "UNIT_METER",
+          "label": "Meter"
+        }
+      ]
+    },
+    "bufferDefaultValue": 5,
+    "bufferWKID": 102003,
+    "simplefillsymbol": {
+      "color": [
+        1,
+        185,
+        253,
+        128
+      ],
+      "outline": {
+        "color": [
+          1,
+          185,
+          253,
+          204
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "spatialrelationships": {
+    "spatialrelationship": [
+      {
+        "name": "esriSpatialRelContains",
+        "label": "entirely contained in"
+      },
+      {
+        "name": "esriSpatialRelIntersects",
+        "label": "intersected by"
+      },
+      {
+        "name": "esriSpatialRelEnvelopeIntersects",
+        "label": "intersected by envelope of"
+      }
+    ]
+  },
+  "graphicalsearchoptions": {
+    "enablepointselect": true,
+    "enablelineselect": true,
+    "enablepolylineselect": true,
+    "enableextentselect": true,
+    "enablecircleselect": true,
+    "enablepolyselect": true,
+    "showmultigraphicsgraphicaloption": true,
+    "showaddtolerancegraphicaloption": true,
+    "showaddsqltextgraphicaloption": true,
+    "showbuffergraphicaloption": true,
+    "buffercheckedbydefaultgraphicaloption": false,
+    "multipartgraphicsearchchecked": false,
+    "addpointtolerancechecked": false,
+    "keepgraphicalsearchenabled": true
+  },
+  "symbols": {
+    "simplemarkersymbol": null,
+    "picturemarkersymbol": {
+      "url": "images/i_search.png",
+      "height": "20",
+      "width": "20",
+      "type": "esriPMS",
+      "angle": "0"
+    },
+    "simplelinesymbol": {
+      "type": "esriSLS",
+      "style": "esriSLSSolid",
+      "color": [
+        255,
+        0,
+        0,
+        204
+      ],
+      "width": 2
+    },
+    "simplefillsymbol": {
+      "color": [
+        255,
+        0,
+        0,
+        128
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          204
+        ],
+        "width": 2,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "resultFormat": {
+    "attTitlesymbol": {
+      "bold": false,
+      "italic": true,
+      "underline": false,
+      "color": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "attValuesymbol": {
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ]
+    }
+  }
+}
