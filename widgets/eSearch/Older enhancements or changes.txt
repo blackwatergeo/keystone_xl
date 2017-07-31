@@ -1,0 +1,255 @@
+Version 2.4
+* Updated for version 2.4 of WAB Developer Edition
+* If only one search is configured the widget UI will show a label with the search layer name instead of a dropdown.
+* Fixed a bug where popup menu items may overwrite each other in some scenarios.
+* Auto activate graphical tool would not work unless you choose by shape as the initial view. Now it works no matter with initial view you select.
+* When setting the initial view to by shape and set default graphical tool to point you receive an error.
+* The by spatial UI tab has been slightly re-organized and more text added to help make the  workflow a little easier to understand.
+
+Version 2.3
+* Added Show attachments option
+* Fixed a bug where a blank popup was shown even if you choose "Disable search results popup".
+* Added default activated graphic tool option to the widget. This will activate the selected draw tool when the By Graphic tab is selected.
+* Added layer specific global overrides for Auto zoom to search results and Disable search results popup.
+* Fix an issue where, if you manually configured the widgets json to use all fields as true the widget would fail on the search. It is still recommended that you use the widgets settings UI for configuring the widget, but for those who like to do this manually the fields all - true now works properly.
+
+Version 2.2
+* Added greater than or equal to and less than or equal to for dates,
+* Added Dutch localization for the widget (not for the setting dialog, Thanks to Pieterjan Wintjes.
+
+Version 2.1
+* Clear Fields now clears dates and predefined user lists.
+* Predefined list now automatically add a blank entry if the field is not required.
+* The contains search is now robust. If you are search for "jones j" it will return all instances of the word "jones" that also have another word with "j". Where before it would only return results that had "*jones j*".
+* Commas in a predefined list can now be escaped correctly.
+* Field order for results is maintained as configured for ArcGIS Server 10.2.x and before.
+* Fixed bug where using unique values on a numeric field with null values in the data failed.
+* Fixed bug where url searches with numeric values and fields using unique values would not execute.
+* Fixed issue with using IN operator with numeric fields.
+* Added ability to configure which numeric fields will be shown in the Show Statistics Dialog.
+* Fixed issue with CSV Export not displaying fields in the formatted vales (i.e dates as numbers, etc).
+* Fixed bug where option "Enable limit results to maps extent by default" was not working.
+* Fixed widget not always reflecting the URL search values search on.
+* Added 3 new URL search keywords, last48, thismonth, thisyear for date searches.
+* Sum at the bottom of the widget did not update when adding or removing results.
+* Added support to not require a date field to have a date in it. What this means is if you have a date field that is not a required field then you can delete the current date that is inserted automatically and that date portion of the SQL query will not be used.
+
+
+Older enhancements or changes
+Version 2.0.x List:
+* If you have popups configured for a layer in the web map and that same layer is used as a search layer then you will have the option to use the default eSearch popup or the web maps popup when click on the search result. The some of this was added in 2.0.1.2 and 3 but it has been debugged and tested for dynamic map layer and now feature layers. Also the layer does not have to added as an operational layer for you to use the web maps popups now.
+* A configuration option has been added to allow changing the dropdown filtering method,. The default is contains but this can be changed to begins with.
+* I have added CSV export ability to the eSearch results. So if the only reason you were adding the search result as an operational layer was be get the AT widget to export as CSV then you can now do this without the use of the AT widget.
+* The ability to order the links in the eSearch has been added.
+* The requirement to have a search label has now been removed. This allows for conserving space where the search label was in the widget before.
+* You can now configure more than one summary field. If more than one is defined then there will be a "More..." link displayed after the first summary result that will open a new summary message window.
+* You now have the ability to define a date range based on the current date minus a configured number of days. This allows you to get the last 30 days from a search without having to explicitly set the date range values.
+* Fixed bug where InfoTemplate was blank for non operational layers.
+* Fixed result title being white in Launchpad theme and hard to read
+* Fixed result title and first line of result overwriting each other in the Dart theme
+* Fixed issue where url search was requiring the exprnum parameter even though it was documented to be optional. It is no optional again.
+* Fixed bug where default InfoTemplate was not used if it exists already a layer in the map.
+* Fixed text wrap option in result format settings dialog
+* Added css rules for Plateau theme
+* Added text wrap option in result format settings dialog
+* Fixed french locale bug
+* Updated to WAB 2.0
+* Added focus to first search parameter when opening widget and switching layers.
+* Fixed issue with symbology by layer and no symbol is specified in config
+* Added Clear Fields link
+* Fixed issue where All or Any drop down not defaulting to All.
+* Fixed widget UI issue when the operator is "Is Blank"
+* Fixed issue where spatial search does not search the chosen layer first layer is not spatial search layer enabled.
+* "Specify parameters for search" text is now replaced with the provided search label.
+* No result text is only shown when actually true.
+* Enabled default layer popups for search layer if thelayer is already part of the map and has a popup configured.
+* Added cancel button to unique values look up.
+* Fixed url searches for fields that used unique values.
+* Improved speed of url searches.
+
+Version 1.3.x List:
+* Fixed issue when ask for values was not checked widget UI did not disable that field
+* Added option to completely disable search result popups in order to use web map configured popups instead.
+* Fixed issue when configured to use unique values and the field had a domain the list returned would be all domain values and not a true unique list of user domain values.
+* Fixed result sorting issue
+* Fixed issue where if a field was configured to use between and ask for values the users values where ignored and only the default values were used.
+* Enhancement made to allow for no expression values to be specified for a search. In the past this would cause an error.
+* Fixed spatial search layer drop down change not having any effect on the search.
+* Added the ability to disable unique values caching. Caching was done to optimize the widgets operation but could lead to issues if the layer is regularly edited.
+* Added the ability to customize the “No result” text.
+* Fixed required fields not disabling the OK button on the configuration dialogs.
+* Added a Max buffer distance configuration option.
+* Added remove button to each search result.
+* Predefined/User values has been re-vamped to allow for a value and a label (what the user sees) to be specified.
+* Fix the point draw icon.
+* Added check all for "popup only"
+* Fixed Several code regression issue that came in 1.3, like result formatting was accidentally removed, and layer specific symbology was removed.
+* Updated to work with breaking changes in WAB 1.3
+* Fixed an issue with the search layers name getting overwritten by the services name even when you changed it
+* Fixed issue with clicking on widget results not zooming to result feature after removing results from current results.
+
+Version 1.2.x List:
+* Added blank option for non-required domain fields
+* Fixed issue with export url not showing when configured to show.
+* Improved help Documentation on the use of Definition Expression.
+* Added scroll bar to predefined values list.
+* Fixed issue where predefined values and unique values options were ignored if a coded domain was present.
+* Added Sum capability for one numeric field per layer
+* Added ability to specify individual layers symbology.
+* Aliases field name are now used when results are sent to the Attribute Table Widget and only fields that are configured are shown.
+* Added clear results link to the By Value tab.
+* Added option to force zoom scale.
+* Fixed more Dart Theme UI issues
+* Fixed date searches for Hosted layers (ArcGIS.com)
+* Removed required from all inputs unless the field is marked as required and the fact that numeric fields were being required even if they were not marked as required.
+* Fixed widget startup issue when one or more search layer map service fail to respond.
+* Fixed URL search failure if a field is marked as required. Due to the URL search not filling the field.
+* Fixed issue with Tab Theme.
+* Fixed buffer unit re-order not be saved to json.
+* Fixed buffer layer being hidden when the widget was closed.
+* Fixed BoxTeme UI overrun issue.
+* All graphical search options are now moved to the graphical search option dialog and new options were added.
+* Added ability to configure buffer graphics by default.
+* When adding a new search layer the name for the layer is suggested based on the map services layer name.
+* Fixed issue with null links still appearing in the results tab.
+* Added the ability to Add and Remove from current search results.
+* Added the ability to require a expression value to be entered instead of having all expression values optional.
+* Added integration with eLocate widgets graphics for graphical search option.
+* Widget result popup header now uses the selected themes style color
+* Unique values now bypass the map services max records limits and provide a indicator of the unique value progress.
+* Date searches have been fixed for Oracle DB data.
+* Added result sorting (identical to the Query widget).
+* Search Expressions can now be promotes and demoted in the expression list.
+* There is now a configuration option to completely disable popups for search results. This does have the negative impact of not have a highlight for the search result when it is clicked on as that was part of the popup features.
+* Fixed path for default point symbol in  default config.json
+* Removed SF 311 incident points from the default config.json as Sample Server 3 seem to go down very often.
+* Added fix for Launch Pad Theme not hiding search results if search layer is not set as operational layer.
+* Added fix for Tabbed Theme when eSearch is part of the more widgets group not hiding search results if search layer is not set as operational layer.
+* Fixed widget title getting cut in half when grouping the widget with another widget.
+* Fixed issue with type id field containing a domain using 0 not displaying domain description.
+* Export Search URL link can now be configured to be shown on the widget or not.
+* Drawing tools now use theme color as their selected color.
+* CSS tweaks to certain themes to make better user experience.
+* Fixed issue with field formatting not working in 1.2
+* Fixed issue with user not being warned that "Show in Attribute Table Widget" requires that "Add Result as Operational Layer" is required.
+* "By Attribute" table title has been changed to "By Value" to better fix the tab space in some themes.
+* The widgets result list colors in the Dart theme have been fixed to has more contrast.
+* Fixed issue where LaunchPad theme did not open the Attribute Table Widget like other themes even though it was configured to do so.
+* Fixed other css issue in LaunchPad theme.
+* Remove some delays in opening the Attribute Table Widget that are no longer necessary.
+* Updated online help with a "What's New" section.
+* Code regression - remove show attachments ability
+* Minor UI tweaks (clicking on a checkbox or radio button label now selects the option).
+* Added ability to add the buffer layer to the legend and thus to the print.
+* Added css style rules for each available theme and their color styles.
+
+Version 1.1.x list:
+* You can now disable a popup link if it is an image or text.
+* Fixed Bug with Coded domains that use numeric fields not displaying domain description.
+* Fix a bug where expression value dialog would not commit changes in certain situations.
+* Fixed a bug where numeric values used in link caused results to fail.
+* Added the "IN" operator to the widgets configuration UI.
+* Added use attribute query text to the graphical search as an option.
+* Fixed a bug where if the same layer and the same field in that layer and a definition query was applied and unique values was chosen for the field, only the first definition query was applied to each layer that used the same field and layer URL.
+* Fixed layer name in the Legend Widget having the layers name before "Search Results"
+* Fixed an issue with the Attribute Table Widget interaction.
+* Added option to have limit search by map extent checked by default.
+* If there is only one search expression for a particular layer then the search alias drop down is hidden from the widget UI
+* Fixed a bug where drop down lists would hang on screen if the drop down was opened and the widget was closed before a list option was selected.
+* The maps popups are disabled now when using the graphical search draw tools.
+* When a layer is configured to set results to the attribute table and be added as an operational layer the widget now waits for the Attribute Table Widget to open before it attempts to zoom to the results.
+* Changes have been made to the interaction with the Attribute Table Widget to ensure better behavior.
+* Fixed issue with last option in the dropdown from a domain would result in "Search Failed".
+* Fixed issue where draw tools on graphical search appeared to not toggle off.
+* Fixed issue with allowing different major geometry types when using multi-part graphical search would cause search to   fail. Now you are warned and given a choice about continuing.
+* Added enhancement for choosing field to be "popup only" (like my Identify widget).
+* Added mouse-over graphic option to bring ups the graphics popup.
+* Fixed issue where Attribute Table Widget would not populate consistently.
+* Field names in popup are now in italics.
+* Added enhancement to allow configuration of which graphical draw tools are available for use.
+* Added enhancement to allow for disabling search tabs.
+* Tweaked some UI visual issues
+* Added an option to limit results to current map extent for text searches.
+* Removed the duplication of the title field in the popup text.
+* Added back the "Search Results: " prefix to the layer name.
+* Fixed an issue with Date range searches failing.
+* Fixed an issue with formatting date fields
+* Fixed and issue with Chrome not sorting drop down lists properly.
+* Fixed Default Symbol issue where changes to the default symbol were not saving correctly to the json.
+* Enhancement made to allow for text links to appear as text links in the widgets results as well as the popup.
+* Show results in Attribute Table Widget is now optional by layer, instead of being global for the whole widget.
+* Added enter key event for widget text boxes.
+* Fixed IE8 widget and settings failure issues.
+* Fixed issue where setting Auto Zoom to results to false in settings dialog was not reflected in the settings when reopened.
+* Clicking on individual search results now zooms to the results geometry extent, where as before the zoom scale was always applied.
+* Search results now support related records link from the popup and the Attribute Table Widget will now open related records properly.
+* Show Attachments links are now available in popups if the results feature support attachments.
+* Open results in Attribute Table is now configurable by layer.
+* If the Attribute Table Widget was opened by the eSearch then it will be closed automatically when you clear the search results.
+* Fixed issue with Spatial Search that did not use a buffer.
+* If field is added for use in a link and is not specified in the searches fields then the field will automatically be added to the field list with a visible property of false.
+* Add field buttons drop down menu now has a max size to prevent the menu from being clipped to the dialogs extent.
+* Unique and User List now function with numeric searches.
+* Query for a numeric filed that has a NaN/Null or zero now work properly.
+* Fixed issue with Numeric Range searches.
+* Fixed an issue when you are working with a search layer that has more than one expression and you have used the 2 or higher expression and then change to a different layer the new layers search will attempt to use the 2 or higher expression on the new layer and error out if that layer only has one expression.
+* Added some css for the search button to handle the situation where a custom theme color is used.
+* Fixed bug with date field format default being invalid.
+* Changed the settings UI to use all modal popups to prevent user from clicking OK button on main setting widget before committing changes to other dialogs.
+* Added French locale (Thanks to Jérémie MAJEROWICZ).
+* Some minor UI cleanup.
+* Removed browse button from search layer url and switched to ServiceURLInput control (clicking enter key or changing focus to another field validates the url entered).
+* Added validation errors text to widget UI.
+* Fixed bug that occurred when you tried to format more than one field for a layer.
+* Keep graphical search active option now works.
+* If "Add result as operational layer" is selected then the Attribute Table widget will display the results of the search after each search.
+* Added "Export Search URL" option to results tab. This allows you to perform a search and then export that search criteria url for sharing with others.
+* Widgets buttons now stylize based on the theme and themes color choice.
+* Added zoom scale for each layer.
+* Fixed bug with numeric searches reporting invalid entry.
+* Fixed bug field formatting number fields.
+* Fixed bug with Layer Symbology from Config (points had an issue).
+* Widget now works with SubTypes.
+* Fixed error when widget does not containing any Spatial Search Layers.
+* If there are no spatial search layer specified then the spatial search tab will automatically be removed from the widget at runtime.
+* Symbology for the search results is now configurable to come from ArcGIS Server or use the widgets default symbology.
+* Added Spatial Search capability.
+* Unique value drop downs are now restricted by the Definition Query.
+* Buffering of graphics used in the graphical search is now supported.
+* Several spelling errors resolved.
+* Definition query is now working.
+* layer multiple links are now part of the widget and UI.
+* Enable multi-part graphical searches.
+* Add search tolerance to point graphical searches.
+* Keep graphical search tool active after drawing is completed.
+* Configurable point search tolerance value.
+* Multiple Search expressions can be added to a search layer.
+* Each search expression can have multiple search values.
+* Search value UI designed for ease of use (no SQL syntax knowledge required).
+* The SQL syntax is displayed for verification (editing not yet available).
+* Search will use unique values from a field is "unique" option is chosen.
+* You can configure predefined value list to be presented to the user in a drop down.
+* Search result symbology is taken from the map service and used if available.
+* Search values UI allows for both date and number ranges. (i.e. 11/11/2014 to 11/20/214).
+* URL searches are now available.
+* If the search field is a string and the unique or predefined options are not choose then the SQL syntax will automatically switch to non case sensitive.
+* Date and number fields are configurable and now have a UI to do so.
+* Definition Expression is yet to be implemented in this release.
+* Widget results are organized vertically.
+* Field names are italics.
+* Field values are decrypted (coded domains, subtypes, dates are all returned with proper values).
+* Widget results include a swatch.
+* When entering text for an attribute search pressing enter executes the search.
+* Changing the search layer clears the search text box and displays the search hint.
+* Zoom to all option added to results page.
+* Result list is in the same field order as specified in the JSON file.
+* Title field is bold in the results.
+* Results use an alternating color.
+* Results have scroll-bars for vertical and horizontal if needed.
+* Clearing results takes you back to the initial view.
+* Initial View is configurable.
+* Default Search Symbology how has a GUI.
+* Searches are now re-orderable in the GUI.
+* Expression textbox now has a prompt for the proper expression format.
+* Include all fields button added.
+* Date field format is configurable (just not in the GUI yet).

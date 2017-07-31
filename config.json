@@ -242,18 +242,16 @@
     },
     "itemId": "409829887d4e4cc89af24141414286bd",
     "mapOptions": {
-            "extent": {
-                "xmin": -13200980.532959644,
-                "ymin": 4688311.97507203,
-                "xmax": -9443947.718687657,
-                "ymax": 6420069.287900524,
-                "spatialReference": {
-                    "wkid": 102100
-                }
-
-            }
-
-        },
+      "extent": {
+        "xmin": -13200980.532959644,
+        "ymin": 4688311.97507203,
+        "xmax": -9443947.718687657,
+        "ymax": 6420069.287900524,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
     "id": "map",
     "portalUrl": "https://gis.exp.com/exp_portal"
   },
@@ -306,13 +304,22 @@
         "id": "widgets_Measurement_Widget_20"
       },
       {
+        "name": "eSearch",
+        "version": "2.4.0.2",
+        "uri": "widgets/eSearch/Widget",
+        "config": "configs/eSearch/config_eSearch.json",
+        "index": 6,
+        "id": "widgets_eSearch_Widget_30"
+      },
+      {
         "name": "About",
         "version": "2.5",
         "icon": "configs\\About\\icon_About.png",
         "uri": "widgets/About/Widget",
-        "config": "configs/About/config_About.json",
-        "index": 6,
-        "id": "widgets_About_Widget_21"
+        "config": "configs/About/config_Document Download.json",
+        "index": 7,
+        "id": "widgets_About_Widget_21",
+        "label": "Document Download"
       },
       {
         "name": "Identify",
@@ -321,7 +328,7 @@
         "icon": "configs\\Identify\\icon_Identify.png",
         "uri": "widgets/Identify/Widget",
         "config": "configs/Identify/config_Identify.json",
-        "index": 7,
+        "index": 8,
         "id": "widgets_Identify_Widget_22"
       },
       {
@@ -330,7 +337,7 @@
         "icon": "configs\\eDraw\\icon_eDraw.png",
         "uri": "widgets/eDraw/Widget",
         "config": "configs/eDraw/config_eDraw.json",
-        "index": 8,
+        "index": 9,
         "id": "widgets_eDraw_Widget_23"
       },
       {
@@ -339,16 +346,15 @@
         "IsController": false,
         "icon": "configs\\AddShapefile\\icon_AddShapefile.png",
         "uri": "widgets/AddShapefile/Widget",
-        "index": 9,
-        "id": "widgets_AddShapefile_Widget_24",
-        "config": null
+        "index": 10,
+        "id": "widgets_AddShapefile_Widget_24"
       },
       {
         "name": "Print",
         "version": "2.5",
         "uri": "widgets/Print/Widget",
         "config": "configs/Print/config_Print.json",
-        "index": 10,
+        "index": 11,
         "id": "widgets_Print_Widget_25",
         "icon": "widgets/Print/images/icon.png?wab_dv=2.1"
       },
@@ -359,7 +365,7 @@
         "icon": "configs\\About\\icon_What's New.png",
         "uri": "widgets/About/Widget",
         "config": "configs/About/config_What's New.json",
-        "index": 11,
+        "index": 12,
         "id": "widgets_About_Widget_26"
       },
       {
@@ -369,7 +375,7 @@
         "icon": "configs\\About\\icon_Help.png",
         "uri": "widgets/About/Widget",
         "config": "configs/About/config_Help.json",
-        "index": 12,
+        "index": 13,
         "id": "widgets_About_Widget_27"
       }
     ],

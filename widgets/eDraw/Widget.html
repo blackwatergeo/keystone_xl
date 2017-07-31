@@ -8,6 +8,9 @@
         ${nls.hideOption}
         <input type="checkbox" data-dojo-attach-point="hideCheckbox" data-dojo-attach-event="onclick:onHideCheckboxClick"/>
   </span>
+    
+    
+     
     <div data-dojo-attach-point="settingAllContent">
 
         <div data-dojo-attach-point="addSection">
@@ -136,9 +139,16 @@
                         </tr>
                     </thead>
                     <tbody data-dojo-attach-point="drawsTableBody"></tbody>
+                      
                 </table>
             </div>
             <div class="footer">
+             <div class="form-group">
+    <label for="input-fileName">Exported Drawing File Name</label>
+    <input type="text" class="form-control" id="input-fileName" value="Drawing Name" placeholder="Enter file name">
+  </div>    
+                
+                
                 <div>
                     <div style="width: calc(100% - 35px);" class="list-draw-actions" data-dojo-attach-point="allActionsNode">
                         <!--<span class="text">${nls.all} :</span>-->
@@ -146,9 +156,7 @@
                         <span title="${nls.zoomAllLabel}" class="zoom blue-button" data-dojo-attach-event="onclick:zoomAll">&nbsp;</span>
                         <span title="${nls.copyLabel}" class="copy blue-button" data-dojo-attach-event="onclick:copy">&nbsp;</span>
                         <span title="${nls.deleteAllLabel}" class="clear red-button" data-dojo-attach-event="onclick:clear">&nbsp;</span>
-						<a data-dojo-attach-point="exportSelectionButton" data-dojo-attach-event="onclick:exportSelectionInFile">
-                            <span title="${nls.exportLabel}" class="export blue-button" >&nbsp;</span>
-                        </a>
+                        <span title="${nls.exportLabel}" class="export blue-button" data-dojo-attach-event="onclick:exportSelectionInFile">&nbsp;</span>
                     </div>
 					<span title="${nls.importTitle}" class="import-button blue-button" data-dojo-attach-event="onclick:launchImportFile">&nbsp;</span>
                 </div>
