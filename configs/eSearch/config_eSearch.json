@@ -126,10 +126,11 @@
                   "valueObj": {
                     "value": ""
                   },
-                  "prompt": "Enter Owner Name:",
+                  "prompt": "OWNER =",
                   "textsearchhint": "'James' or 'Smith' or 'James Smith'",
-                  "sqltext": "Upper(OWNER) LIKE Upper('%[value]%')",
-                  "operation": "stringOperatorContains"
+                  "sqltext": "OWNER = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "OWNER"
                 },
                 {
                   "fieldObj": {
@@ -141,8 +142,8 @@
                   "valueObj": {
                     "value": ""
                   },
-                  "prompt": "Select Project Number",
-                  "textsearchhint": "ML-MT-DA-00303.000",
+                  "prompt": "Project Number =",
+                  "textsearchhint": "'ML-MT-DA-00303.000'",
                   "sqltext": "PRJTRACTNO = '[value]'",
                   "operation": "stringOperatorIs",
                   "uniquevalsfromfield": "PRJTRACTNO",
@@ -167,23 +168,28 @@
           },
           {
             "name": "CLASS",
-            "alias": "CLASS"
+            "alias": "CLASS",
+            "popuponly": true
           },
           {
             "name": "ROW_IMPACT",
-            "alias": "ROW_IMPACT"
+            "alias": "ROW_IMPACT",
+            "popuponly": true
           },
           {
             "name": "COUNTY",
-            "alias": "CO"
+            "alias": "CO",
+            "popuponly": true
           },
           {
             "name": "COMMENTS",
-            "alias": "COMMENTS"
+            "alias": "COMMENTS",
+            "popuponly": true
           },
           {
             "name": "PERMISSION_STATUS",
-            "alias": "PERM_STATUS"
+            "alias": "PERM_STATUS",
+            "popuponly": true
           }
         ]
       },
@@ -192,7 +198,6 @@
       },
       "orderByFields": [],
       "showattachments": false,
-      "autozoomtoresults": false,
       "layersymbolfrom": "layer",
       "symbology": {
         "color": [
@@ -209,6 +214,1762 @@
             255
           ],
           "width": 2.25,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Current Waterbodies Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/4",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "FeatureId_exp",
+            "textsearchlabel": "Search by Feature ID OR Name",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "NAME",
+                    "label": "NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "NAME =",
+                  "textsearchhint": "'Indian Creek' or 'Indian'",
+                  "sqltext": "NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "NAME"
+                },
+                {
+                  "fieldObj": {
+                    "name": "FEATURE_ID",
+                    "label": "FEATURE_ID",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "FEATURE_ID =",
+                  "textsearchhint": "exp-WB-0002",
+                  "sqltext": "FEATURE_ID = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "FEATURE_ID",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "FEATURE_ID",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "LULC",
+            "alias": "LULC"
+          },
+          {
+            "name": "FEATURE_ID",
+            "alias": "FEATURE_ID"
+          },
+          {
+            "name": "NAME",
+            "alias": "NAME"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS",
+            "popuponly": true
+          },
+          {
+            "name": "WMS",
+            "alias": "WMS",
+            "popuponly": true
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "DATE_SURVE",
+            "alias": "DATE_SURVE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Origin",
+            "alias": "Origin",
+            "popuponly": true
+          },
+          {
+            "name": "WESTECH",
+            "alias": "WESTECH",
+            "popuponly": true
+          },
+          {
+            "name": "METHOD",
+            "alias": "METHOD",
+            "popuponly": true
+          },
+          {
+            "name": "NECKDOWN",
+            "alias": "NECKDOWN",
+            "popuponly": true
+          },
+          {
+            "name": "DSGNTD_USE",
+            "alias": "DSGNTD_USE",
+            "popuponly": true
+          },
+          {
+            "name": "SPPRTS_USE",
+            "alias": "SPPRTS_USE",
+            "popuponly": true
+          },
+          {
+            "name": "DOWNSTREAM",
+            "alias": "DOWNSTREAM",
+            "popuponly": true
+          },
+          {
+            "name": "OTHER_DESC",
+            "alias": "OTHER_DESC",
+            "popuponly": true
+          },
+          {
+            "name": "FISHERY",
+            "alias": "FISHERY",
+            "popuponly": true
+          },
+          {
+            "name": "GIS_FEAT_ID",
+            "alias": "GIS_FEAT_ID",
+            "popuponly": true
+          },
+          {
+            "name": "SWQC",
+            "alias": "SWQC",
+            "popuponly": true
+          },
+          {
+            "name": "STATE",
+            "alias": "STATE"
+          },
+          {
+            "name": "COUNTY",
+            "alias": "COUNTY"
+          },
+          {
+            "name": "ID_303d",
+            "alias": "ID_303d",
+            "popuponly": true
+          },
+          {
+            "name": "ID_305b",
+            "alias": "ID_305b",
+            "popuponly": true
+          },
+          {
+            "name": "ID_303c",
+            "alias": "ID_303c",
+            "popuponly": true
+          },
+          {
+            "name": "USACE",
+            "alias": "USACE",
+            "popuponly": true
+          },
+          {
+            "name": "AS_",
+            "alias": "AS",
+            "popuponly": true
+          },
+          {
+            "name": "MT_Permit",
+            "alias": "MT_Permit",
+            "popuponly": true
+          },
+          {
+            "name": "MFSA",
+            "alias": "MFSA",
+            "popuponly": true
+          },
+          {
+            "name": "Subbasin",
+            "alias": "Subbasin",
+            "popuponly": true
+          },
+          {
+            "name": "HUC8",
+            "alias": "HUC8",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "ST_USE_CLASS",
+            "alias": "ST_USE_CLASS",
+            "popuponly": true
+          },
+          {
+            "name": "Additional_Comments",
+            "alias": "Additional_Comments",
+            "popuponly": true
+          },
+          {
+            "name": "OHWM",
+            "alias": "OHWM",
+            "popuponly": true
+          },
+          {
+            "name": "TOB_WIDTH",
+            "alias": "TOB_WIDTH",
+            "popuponly": true
+          },
+          {
+            "name": "TERRACON",
+            "alias": "TERRACON",
+            "popuponly": true
+          },
+          {
+            "name": "GOLDER",
+            "alias": "GOLDER",
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "REGION",
+            "alias": "REGION",
+            "popuponly": true
+          },
+          {
+            "name": "SUBREGION",
+            "alias": "SUBREGION",
+            "popuponly": true
+          },
+          {
+            "name": "BASIN",
+            "alias": "BASIN",
+            "popuponly": true
+          },
+          {
+            "name": "LABEL_ID",
+            "alias": "LABEL_ID",
+            "popuponly": true
+          },
+          {
+            "name": "LABEL_Y_N",
+            "alias": "LABEL_Y_N",
+            "popuponly": true
+          },
+          {
+            "name": "CONNECTING_IDS",
+            "alias": "CONNECTING_IDS",
+            "popuponly": true
+          },
+          {
+            "name": "DATA_SHEET_Y_N",
+            "alias": "DATA_SHEET_Y_N",
+            "popuponly": true
+          },
+          {
+            "name": "PCN",
+            "alias": "PCN",
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Current Wetlands Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/5",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "wetlandsName",
+            "textsearchlabel": "Search by Feature ID",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "FEATURE_ID",
+                    "label": "FEATURE_ID",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": "AN130HT004"
+                  },
+                  "prompt": "FEATURE_ID =",
+                  "textsearchhint": "'exp-WL-0004' or 'W002HT006'",
+                  "sqltext": "FEATURE_ID = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "FEATURE_ID",
+                  "required": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "FEATURE_ID",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "LULC",
+            "alias": "LULC"
+          },
+          {
+            "name": "FEATURE_ID",
+            "alias": "FEATURE_ID"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS",
+            "popuponly": true
+          },
+          {
+            "name": "WMS",
+            "alias": "WMS",
+            "popuponly": true
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "DATE_SURVE",
+            "alias": "DATE_SURVE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Origin",
+            "alias": "Origin",
+            "popuponly": true
+          },
+          {
+            "name": "WESTECH",
+            "alias": "WESTECH",
+            "popuponly": true
+          },
+          {
+            "name": "METHOD",
+            "alias": "METHOD",
+            "popuponly": true
+          },
+          {
+            "name": "NECKDOWN",
+            "alias": "NECKDOWN",
+            "popuponly": true
+          },
+          {
+            "name": "GIS_FEAT_ID",
+            "alias": "GIS_FEAT_ID",
+            "popuponly": true
+          },
+          {
+            "name": "SWQC",
+            "alias": "SWQC",
+            "popuponly": true
+          },
+          {
+            "name": "STATE",
+            "alias": "STATE"
+          },
+          {
+            "name": "COUNTY",
+            "alias": "COUNTY"
+          },
+          {
+            "name": "USACE",
+            "alias": "USACE",
+            "popuponly": true
+          },
+          {
+            "name": "AS_",
+            "alias": "AS_",
+            "popuponly": true
+          },
+          {
+            "name": "Subbasin",
+            "alias": "Subbasin",
+            "popuponly": true
+          },
+          {
+            "name": "HUC8",
+            "alias": "HUC8",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "ST_USE_CLASS",
+            "alias": "ST_USE_CLASS",
+            "popuponly": true
+          },
+          {
+            "name": "MT_Permit",
+            "alias": "MT_Permit",
+            "popuponly": true
+          },
+          {
+            "name": "Additional_Comments",
+            "alias": "Additional_Comments",
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "REGION",
+            "alias": "REGION",
+            "popuponly": true
+          },
+          {
+            "name": "SUBREGION",
+            "alias": "SUBREGION",
+            "popuponly": true
+          },
+          {
+            "name": "BASIN",
+            "alias": "BASIN",
+            "popuponly": true
+          },
+          {
+            "name": "LABEL_ID",
+            "alias": "LABEL_ID",
+            "popuponly": true
+          },
+          {
+            "name": "LABEL_Y_N",
+            "alias": "LABEL_Y_N",
+            "popuponly": true
+          },
+          {
+            "name": "CONNECTING_IDS",
+            "alias": "CONNECTING_IDS",
+            "popuponly": true
+          },
+          {
+            "name": "DATA_SHEET_Y_N",
+            "alias": "DATA_SHEET_Y_N",
+            "popuponly": true
+          },
+          {
+            "name": "PCN",
+            "alias": "PCN",
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Working Pump Station Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/6",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "PS",
+            "textsearchlabel": "Search by pump station Name or ID",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "NAME",
+                    "label": "NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "NAME =",
+                  "textsearchhint": "'Buffalo'",
+                  "sqltext": "NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "NAME"
+                },
+                {
+                  "fieldObj": {
+                    "name": "PS_ID",
+                    "label": "PS_ID",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {},
+                  "prompt": "PS_ID =",
+                  "textsearchhint": "'PS-09'",
+                  "sqltext": "PS_ID = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "PS_ID",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "PS_ID",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "PS_ID",
+            "alias": "PS_ID"
+          },
+          {
+            "name": "NAME",
+            "alias": "NAME"
+          },
+          {
+            "name": "AREA_ac",
+            "alias": "AREA_ac",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "County",
+            "alias": "County"
+          },
+          {
+            "name": "State",
+            "alias": "State"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS",
+            "popuponly": true
+          },
+          {
+            "name": "Cent_LAT",
+            "alias": "Cent_LAT",
+            "popuponly": true
+          },
+          {
+            "name": "Cent_LONG",
+            "alias": "Cent_LONG",
+            "popuponly": true
+          },
+          {
+            "name": "STATUS",
+            "alias": "STATUS",
+            "popuponly": true
+          },
+          {
+            "name": "DATE",
+            "alias": "DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Working Valves Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/7",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": true,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "workingvalves",
+            "textsearchlabel": "Search by old or new Valve ID",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "VALVE_ID",
+                    "label": "VALVE_ID",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Old Valve ID =",
+                  "textsearchhint": "'MLV-17'",
+                  "sqltext": "VALVE_ID = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "VALVE_ID"
+                },
+                {
+                  "fieldObj": {
+                    "name": "VALVE_NAME",
+                    "label": "VALVE_NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "New Valve ID =",
+                  "textsearchhint": "'260-BFLPS-01B'",
+                  "sqltext": "VALVE_NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "VALVE_NAME",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "Id",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "Id",
+            "alias": "Id",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "NUM",
+            "alias": "NUM",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "VALVE_ID",
+            "alias": "VALVE_ID"
+          },
+          {
+            "name": "TYPE",
+            "alias": "TYPE",
+            "popuponly": true
+          },
+          {
+            "name": "County",
+            "alias": "County"
+          },
+          {
+            "name": "State",
+            "alias": "State"
+          },
+          {
+            "name": "LAT",
+            "alias": "LAT",
+            "popuponly": true
+          },
+          {
+            "name": "LONG",
+            "alias": "LONG",
+            "popuponly": true
+          },
+          {
+            "name": "WMS",
+            "alias": "WMS",
+            "popuponly": true
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "TAG_MOV",
+            "alias": "TAG_MOV",
+            "popuponly": true
+          },
+          {
+            "name": "TAG_CKV",
+            "alias": "TAG_CKV",
+            "popuponly": true
+          },
+          {
+            "name": "TAG_MAN",
+            "alias": "TAG_MAN",
+            "popuponly": true
+          },
+          {
+            "name": "ROAD",
+            "alias": "ROAD",
+            "popuponly": true
+          },
+          {
+            "name": "SIDE",
+            "alias": "SIDE",
+            "popuponly": true
+          },
+          {
+            "name": "ANGLE",
+            "alias": "ANGLE",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "VALVE_NAME",
+            "alias": "VALVE_NAME"
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "EMERGENCY_ADDRESS",
+            "alias": "EMERGENCY_ADDRESS",
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        }
+      }
+    },
+    {
+      "name": "Cultural Architectural Properties NE Only",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/9",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "architecturalNeonly",
+            "textsearchlabel": "Search by Field Name OR NeHBS_No",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "FIELD_NAME",
+                    "label": "FIELD_NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "FIELD_NAME =",
+                  "textsearchhint": "'C201JE003AP'",
+                  "sqltext": "FIELD_NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "FIELD_NAME"
+                },
+                {
+                  "fieldObj": {
+                    "name": "NeHBS_No",
+                    "label": "NeHBS_No",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "NeHBS_No =",
+                  "textsearchhint": "'AP00-000'",
+                  "sqltext": "NeHBS_No = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "NeHBS_No",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "FIELD_NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "Id",
+            "alias": "Id",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "FIELD_NAME",
+            "alias": "FIELD_NAME"
+          },
+          {
+            "name": "RECORDER_N",
+            "alias": "RECORDER_N",
+            "popuponly": true
+          },
+          {
+            "name": "SURVEY_DAT",
+            "alias": "SURVEY_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "SUBMIT_DAT",
+            "alias": "SUBMIT_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "CREW_NO",
+            "alias": "CREW_NO",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Eligibilit",
+            "alias": "Eligibilit",
+            "popuponly": true
+          },
+          {
+            "name": "COMMENT",
+            "alias": "COMMENT",
+            "popuponly": true
+          },
+          {
+            "name": "NeHBS_No",
+            "alias": "NeHBS_No"
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Cultural_Affiliation",
+            "alias": "Cultural_Affiliation",
+            "popuponly": true
+          },
+          {
+            "name": "Site_Type",
+            "alias": "Site_Type",
+            "popuponly": true
+          },
+          {
+            "name": "Eligibility_Recommendation",
+            "alias": "Eligibility_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "Project_Effect",
+            "alias": "Project_Effect",
+            "popuponly": true
+          },
+          {
+            "name": "Mgmt_Recommendation",
+            "alias": "Mgmt_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "SHPO_Concurrence",
+            "alias": "SHPO_Concurrence",
+            "popuponly": true
+          },
+          {
+            "name": "Report_Reference",
+            "alias": "Report_Reference",
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Cultural Isolated Finds Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/10",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "isofinds",
+            "textsearchlabel": "Search by Field Name OR Smith Name",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "FIELD_NAME",
+                    "label": "FIELD_NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "FIELD_NAME =",
+                  "textsearchhint": "'C001DA001'",
+                  "sqltext": "FIELD_NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "FIELD_NAME"
+                },
+                {
+                  "fieldObj": {
+                    "name": "Smith_Name",
+                    "label": "Smith_Name",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Smith_Name =",
+                  "textsearchhint": "'25YK26' or '39GR0164'",
+                  "sqltext": "Smith_Name = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "Smith_Name",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "FIELD_NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "SURVEY_DAT",
+            "alias": "SURVEY_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "SUBMIT_DAT",
+            "alias": "SUBMIT_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "CREW_NO",
+            "alias": "CREW_NO",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "FIELD_NAME",
+            "alias": "FIELD_NAME"
+          },
+          {
+            "name": "COMMENT",
+            "alias": "COMMENT",
+            "popuponly": true
+          },
+          {
+            "name": "Smith_Name",
+            "alias": "Smith_Name"
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Cultural_Affiliation",
+            "alias": "Cultural_Affiliation",
+            "popuponly": true
+          },
+          {
+            "name": "Site_Type",
+            "alias": "Site_Type",
+            "popuponly": true
+          },
+          {
+            "name": "Eligibility_Recommendation",
+            "alias": "Eligibility_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "Project_Effect",
+            "alias": "Project_Effect",
+            "popuponly": true
+          },
+          {
+            "name": "Mgmt_Recommendation",
+            "alias": "Mgmt_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "SHPO_Concurrence",
+            "alias": "SHPO_Concurrence",
+            "popuponly": true
+          },
+          {
+            "name": "Report_Reference",
+            "alias": "Report_Reference",
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        }
+      }
+    },
+    {
+      "name": "Cultural Polygon Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/11",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "ClutPolySearch",
+            "textsearchlabel": "Search by Field Name OR Smith Numb",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "FIELD_NAME",
+                    "label": "FIELD_NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "FIELD_NAME =",
+                  "textsearchhint": "'24DW0553'",
+                  "sqltext": "FIELD_NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "FIELD_NAME"
+                },
+                {
+                  "fieldObj": {
+                    "name": "Smith_Numb",
+                    "label": "Smith_Numb",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Smith_Numb =",
+                  "textsearchhint": "'24DW0426'",
+                  "sqltext": "Smith_Numb = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "Smith_Numb",
+                  "operator": "AND"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "FIELD_NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "FIELD_NAME",
+            "alias": "FIELD_NAME"
+          },
+          {
+            "name": "SITE_NO",
+            "alias": "SITE_NO",
+            "popuponly": true
+          },
+          {
+            "name": "Smith_Numb",
+            "alias": "Smith_Numb"
+          },
+          {
+            "name": "RECORDER_N",
+            "alias": "RECORDER_N",
+            "popuponly": true
+          },
+          {
+            "name": "SURVEY_DAT",
+            "alias": "SURVEY_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "SUBMIT_DAT",
+            "alias": "SUBMIT_DAT",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "CREW_NO",
+            "alias": "CREW_NO",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Eligibilit",
+            "alias": "Eligibilit",
+            "popuponly": true
+          },
+          {
+            "name": "COMMENT",
+            "alias": "COMMENT",
+            "popuponly": true
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Cultural_Affiliation",
+            "alias": "Cultural_Affiliation",
+            "popuponly": true
+          },
+          {
+            "name": "Site_Type",
+            "alias": "Site_Type",
+            "popuponly": true
+          },
+          {
+            "name": "Eligibility_Recommendation",
+            "alias": "Eligibility_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "Project_Effect",
+            "alias": "Project_Effect",
+            "popuponly": true
+          },
+          {
+            "name": "Mgmt_Recommendation",
+            "alias": "Mgmt_Recommendation",
+            "popuponly": true
+          },
+          {
+            "name": "SHPO_Concurrence",
+            "alias": "SHPO_Concurrence",
+            "popuponly": true
+          },
+          {
+            "name": "Report_Reference",
+            "alias": "Report_Reference",
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Cultural Previously Recorded Site Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/12",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "CultPrev",
+            "textsearchlabel": "Search by Site Number",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "site_numbe",
+                    "label": "site_numbe",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "Site Number =",
+                  "textsearchhint": "'24DW0419'",
+                  "sqltext": "site_numbe = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "site_numbe"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "site_numbe",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "Id",
+            "alias": "Id",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "site_numbe",
+            "alias": "site_numbe"
+          },
+          {
+            "name": "Eligiblity",
+            "alias": "Eligiblity",
+            "popuponly": true
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS",
+            "popuponly": true
+          },
+          {
+            "name": "KXL_Buffer",
+            "alias": "KXL_Buffer",
+            "popuponly": true
+          },
+          {
+            "name": "State",
+            "alias": "State",
+            "popuponly": true
+          },
+          {
+            "name": "COMMENTS_",
+            "alias": "COMMENTS_",
+            "popuponly": true
+          },
+          {
+            "name": "Duplicate",
+            "alias": "Duplicate",
+            "popuponly": true
+          },
+          {
+            "name": "K_XL_Steele_City_13_SDE_Cul_11",
+            "alias": "K_XL_Steele_City_13_SDE_Cul_11",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "SOURCE",
+            "alias": "SOURCE",
+            "popuponly": true
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "created_user",
+            "alias": "created_user",
+            "popuponly": true
+          },
+          {
+            "name": "created_date",
+            "alias": "created_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_user",
+            "alias": "last_edited_user",
+            "popuponly": true
+          },
+          {
+            "name": "last_edited_date",
+            "alias": "last_edited_date",
+            "isdate": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Length",
+            "alias": "Shape_Length",
+            "isnumber": true,
+            "popuponly": true
+          },
+          {
+            "name": "Shape_Area",
+            "alias": "Shape_Area",
+            "isnumber": true,
+            "popuponly": true
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          246,
+          91,
+          60,
+          0
+        ],
+        "outline": {
+          "color": [
+            246,
+            91,
+            60,
+            255
+          ],
+          "width": 1.5,
           "type": "esriSLS",
           "style": "esriSLSSolid",
           "marker": null

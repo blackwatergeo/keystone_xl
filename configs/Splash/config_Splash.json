@@ -1,29 +1,33 @@
 {
   "splash": {
-    "splashContent": "<div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\">What's New</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-21</b> Upgraded to new web mapping infrastructure</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Save Session State Widget Addition</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Shared Sketches from Editing Site</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-12</b>  Added Alignment Sheets</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-06-28</b> Added PennWell and Rextag Oil/Gas and Electric Datasets to Reference Data</font></div><div style=\"text-align: center;\"><font size=\"4\"><br /></font></div>",
+    "splashContent": "<div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\">What's New</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\"><br /></font></div><div style=\"text-align: center;\"><div><b style=\"color: rgb(47, 79, 79); font-size: large;\">2017-07-31</b><font color=\"#2f4f4f\" size=\"4\"> Added Elevation Profile Widget.</font></div></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"5\"><br /></font></div><div style=\"text-align: center;\"><b style=\"color: rgb(47, 79, 79); font-size: large;\">2017-07-31</b><font color=\"#2f4f4f\" size=\"4\"> Added Enhanced Search Widget, Next and Previous Extent Indicators, Layer List Widget Enhancements.</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Added Management of Change (MOC) group to Project Data</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div>\n\n<style>\n&amp;lt;!--\n /* Font Definitions */\n @font-face\n\t{font-family:&amp;quot;Cambria Math&amp;quot;;\n\tpanose-1:2 4 5 3 5 4 6 3 2 4;}\n@font-face\n\t{font-family:Calibri;\n\tpanose-1:2 15 5 2 2 2 4 3 2 4;}\n@font-face\n\t{font-family:&amp;quot;Segoe UI&amp;quot;;\n\tpanose-1:2 11 5 2 4 2 4 2 2 3;}\n /* Style Definitions */\n p.MsoNormal, li.MsoNormal, div.MsoNormal\n\t{margin-top:0in;\n\tmargin-right:0in;\n\tmargin-bottom:8.0pt;\n\tmargin-left:0in;\n\tline-height:107%;\n\tfont-size:11.0pt;\n\tfont-family:&amp;quot;Calibri&amp;quot;,sans-serif;}\n.MsoChpDefault\n\t{font-family:&amp;quot;Calibri&amp;quot;,sans-serif;}\n.MsoPapDefault\n\t{margin-bottom:8.0pt;\n\tline-height:107%;}\n /* Page Definitions */\n @page WordSection1\n\t{size:8.5in 11.0in;\n\tmargin:1.0in 1.0in 1.0in 1.0in;}\ndiv.WordSection1\n\t{page:WordSection1;}\n--&amp;gt;\n</style>\n\n\n\n\n\n<div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-21</b> Upgraded to new web mapping infrastructure</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Save Session State Widget Addition</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\">Shared Sketches from Editing Site</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-07-12</b>  Added Alignment Sheets</font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><br /></font></div><div style=\"text-align: center;\"><font color=\"#2f4f4f\" size=\"4\"><b>2017-06-28</b> Added PennWell and Rextag Oil/Gas and Electric Datasets to Reference Data</font></div><div style=\"text-align: center;\"><font size=\"4\"><br /></font></div>",
     "requireConfirm": false,
     "showOption": false,
     "confirmEverytime": true,
     "confirm": {
       "text": "",
       "color": "#ffffff",
-      "transparency": "0"
+      "transparency": 0
     },
     "size": {
       "mode": "wh",
       "wh": {
         "w": 600,
-        "h": null
+        "h": 426
       }
     },
     "background": {
       "mode": "color",
+      "image": null,
+      "type": "fill",
+      "fileName": "No%20file%20chosen",
       "color": "#ffffff",
-      "transparency": "0"
+      "transparency": 0
     },
     "button": {
       "color": "#518dca",
-      "transparency": "0"
+      "transparency": 0,
+      "text": "OK"
     },
     "contentVertical": "top"
   }
