@@ -100,7 +100,13 @@
           "relativeTo": "map"
         },
         "placeholderIndex": 1,
-        "id": "_6"
+        "id": "_6",
+        "name": "ElevationProfile",
+        "version": "2.4.2",
+        "closeable": true,
+        "IsController": false,
+        "uri": "widgets/ElevationProfile/Widget",
+        "config": "configs/ElevationProfile/config_ElevationProfile.json"
       },
       {
         "position": {
@@ -108,8 +114,11 @@
           "top": 45,
           "relativeTo": "map"
         },
-        "placeholderIndex": 2,
-        "id": "_7"
+        "placeholderIndex": 1,
+        "id": "_7",
+        "version": "1.0",
+        "closeable": true,
+        "uri": ""
       },
       {
         "position": {
@@ -117,7 +126,7 @@
           "top": 45,
           "relativeTo": "map"
         },
-        "placeholderIndex": 3,
+        "placeholderIndex": 2,
         "id": "_8"
       },
       {
@@ -126,7 +135,7 @@
           "top": 45,
           "relativeTo": "map"
         },
-        "placeholderIndex": 4,
+        "placeholderIndex": 3,
         "id": "_9"
       },
       {
@@ -174,8 +183,7 @@
         "version": "2.5",
         "id": "widgets_AttributeTable_Widget_13",
         "icon": "widgets/AttributeTable/images/icon.png?wab_dv=2.1",
-        "name": "AttributeTable",
-        "config": "configs/AttributeTable/config_AttributeTable.json"
+        "name": "AttributeTable"
       },
       {
         "uri": "widgets/Splash/Widget",
@@ -240,18 +248,8 @@
       "right": 0,
       "bottom": 0
     },
-    "itemId": "409829887d4e4cc89af24141414286bd",
-    "mapOptions": {
-      "extent": {
-        "xmin": -13200980.532959644,
-        "ymin": 4688311.97507203,
-        "xmax": -9443947.718687657,
-        "ymax": 6420069.287900524,
-        "spatialReference": {
-          "wkid": 102100
-        }
-      }
-    },
+    "itemId": "200d1cba2d8e47b6b2838d294f63a1bf",
+    "mapOptions": {},
     "id": "map",
     "portalUrl": "https://gis.exp.com/exp_portal"
   },
@@ -282,7 +280,6 @@
         "id": "widgets_LayerList_Widget_17",
         "icon": "configs\\LayerList\\icon_LayerList.png",
         "name": "LayerList",
-        "config": "configs/LayerList/config_LayerList.json",
         "index": 3
       },
       {
@@ -304,11 +301,21 @@
         "id": "widgets_Measurement_Widget_20"
       },
       {
+        "name": "Geoprocessing",
+        "label": "Identify Milepost",
+        "version": "2.5",
+        "icon": "configs\\Geoprocessing\\icon_Identify Milepost.png",
+        "uri": "widgets/Geoprocessing/Widget",
+        "config": "configs/Geoprocessing/config_Identify Milepost.json",
+        "index": 6,
+        "id": "widgets_Geoprocessing_Widget_34"
+      },
+      {
         "name": "eSearch",
         "version": "2.4.0.2",
         "uri": "widgets/eSearch/Widget",
         "config": "configs/eSearch/config_eSearch.json",
-        "index": 6,
+        "index": 7,
         "id": "widgets_eSearch_Widget_30"
       },
       {
@@ -317,7 +324,7 @@
         "icon": "configs\\About\\icon_About.png",
         "uri": "widgets/About/Widget",
         "config": "configs/About/config_Document Download.json",
-        "index": 7,
+        "index": 8,
         "id": "widgets_About_Widget_21",
         "label": "Document Download"
       },
@@ -328,16 +335,16 @@
         "icon": "configs\\Identify\\icon_Identify.png",
         "uri": "widgets/Identify/Widget",
         "config": "configs/Identify/config_Identify.json",
-        "index": 8,
+        "index": 9,
         "id": "widgets_Identify_Widget_22"
       },
       {
         "name": "eDraw",
-        "version": "2.1.1",
+        "version": "2.1.2",
         "icon": "configs\\eDraw\\icon_eDraw.png",
         "uri": "widgets/eDraw/Widget",
         "config": "configs/eDraw/config_eDraw.json",
-        "index": 9,
+        "index": 10,
         "id": "widgets_eDraw_Widget_23"
       },
       {
@@ -346,7 +353,7 @@
         "IsController": false,
         "icon": "configs\\AddShapefile\\icon_AddShapefile.png",
         "uri": "widgets/AddShapefile/Widget",
-        "index": 10,
+        "index": 11,
         "id": "widgets_AddShapefile_Widget_24"
       },
       {
@@ -354,7 +361,7 @@
         "version": "2.5",
         "uri": "widgets/Print/Widget",
         "config": "configs/Print/config_Print.json",
-        "index": 11,
+        "index": 12,
         "id": "widgets_Print_Widget_25",
         "icon": "widgets/Print/images/icon.png?wab_dv=2.1"
       },
@@ -365,7 +372,7 @@
         "icon": "configs\\About\\icon_What's New.png",
         "uri": "widgets/About/Widget",
         "config": "configs/About/config_What's New.json",
-        "index": 12,
+        "index": 13,
         "id": "widgets_About_Widget_26"
       },
       {
@@ -375,7 +382,7 @@
         "icon": "configs\\About\\icon_Help.png",
         "uri": "widgets/About/Widget",
         "config": "configs/About/config_Help.json",
-        "index": 13,
+        "index": 14,
         "id": "widgets_About_Widget_27"
       }
     ],
@@ -408,7 +415,7 @@
     },
     "loadingGif": {
       "visible": true,
-      "uri": "configs/loading/images/predefined_loading_1.gif",
+      "uri": "/webappbuilder/apps/3/configs/loading/images/predefined_loading_1.gif",
       "width": 58,
       "height": 29
     }

@@ -3,7 +3,7 @@
     "basemaps": [
       {
         "title": "Dark Gray Canvas",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_12.png",
         "layers": [
           {
             "id": "layer0",
@@ -27,7 +27,7 @@
       },
       {
         "title": "Imagery",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_1.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_13.png",
         "layers": [
           {
             "id": "World_Imagery_2017",
@@ -42,7 +42,7 @@
       },
       {
         "title": "Imagery with Labels",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_2.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_14.png",
         "layers": [
           {
             "id": "World_Imagery_6611",
@@ -64,7 +64,7 @@
       },
       {
         "title": "Light Gray Canvas",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_3.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_15.png",
         "layers": [
           {
             "id": "World_Light_Gray_Base_1486",
@@ -86,7 +86,7 @@
       },
       {
         "title": "National Geographic",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_4.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_16.png",
         "layers": [
           {
             "id": "NatGeo_World_Map_2536",
@@ -101,7 +101,7 @@
       },
       {
         "title": "Oceans",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_5.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_17.png",
         "layers": [
           {
             "id": "Ocean_Basemap_2089",
@@ -123,7 +123,7 @@
       },
       {
         "title": "OpenStreetMap",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_6.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_18.png",
         "layers": [
           {
             "visibility": true,
@@ -137,7 +137,7 @@
       },
       {
         "title": "Streets",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_7.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_19.png",
         "layers": [
           {
             "id": "World_Street_Map_8421",
@@ -152,7 +152,7 @@
       },
       {
         "title": "Terrain with Labels",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_8.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_20.png",
         "layers": [
           {
             "id": "World_Terrain_Base_3",
@@ -177,7 +177,7 @@
       },
       {
         "title": "Topographic",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_9.png",
+        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_21.png",
         "layers": [
           {
             "id": "defaultBasemap",
@@ -188,42 +188,6 @@
         ],
         "spatialReference": {
           "wkid": "102100"
-        }
-      },
-      {
-        "title": "World Imagery Export",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_10.png",
-        "layers": [
-          {
-            "id": "layer0",
-            "layerType": "ArcGISTiledMapServiceLayer",
-            "opacity": 1,
-            "visibility": true,
-            "url": "https://gis.exp.com/exp_portal/sharing/servers/762a46ef7d1d42579b880a869e42afc4/rest/services/World_Imagery/MapServer",
-            "itemId": "762a46ef7d1d42579b880a869e42afc4"
-          }
-        ],
-        "spatialReference": {
-          "wkid": 102100,
-          "latestWkid": 3857
-        }
-      },
-      {
-        "title": "World Street Map Export",
-        "thumbnailUrl": "${appPath}/configs/BasemapGallery/thumbnailUrl_11.png",
-        "layers": [
-          {
-            "id": "layer0",
-            "layerType": "ArcGISTiledMapServiceLayer",
-            "opacity": 1,
-            "visibility": true,
-            "url": "https://gis.exp.com/exp_portal/sharing/servers/d197577e9f3942c3902d2da0fd72ceb0/rest/services/World_Street_Map/MapServer",
-            "itemId": "d197577e9f3942c3902d2da0fd72ceb0"
-          }
-        ],
-        "spatialReference": {
-          "wkid": 102100,
-          "latestWkid": 3857
         }
       }
     ],
