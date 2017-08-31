@@ -1,7 +1,7 @@
 {
   "layers": [
     {
-      "name": "Mile Post Search",
+      "name": "Milepost Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/0",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -98,7 +98,7 @@
       }
     },
     {
-      "name": "Property Parcels Search",
+      "name": "Property Parcel Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/2",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -223,7 +223,7 @@
       }
     },
     {
-      "name": "Current Waterbodies Search",
+      "name": "Waterbody Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/4",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -562,7 +562,7 @@
       }
     },
     {
-      "name": "Current Wetlands Search",
+      "name": "Wetland Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/5",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -816,7 +816,7 @@
       }
     },
     {
-      "name": "Working Pump Station Search",
+      "name": "Pump Station Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/6",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -988,7 +988,7 @@
       }
     },
     {
-      "name": "Working Valves Search",
+      "name": "Valve Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/7",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -1196,7 +1196,7 @@
       }
     },
     {
-      "name": "Cultural Architectural Properties NE Only",
+      "name": "Cultural Architectural Property NE Only",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/9",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -1410,7 +1410,7 @@
       }
     },
     {
-      "name": "Cultural Isolated Finds Search",
+      "name": "Cultural Isolated Find Search",
       "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/10",
       "definitionexpression": "",
       "spatialsearchlayer": false,
@@ -1967,6 +1967,425 @@
             246,
             91,
             60,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        },
+        "type": "esriSFS",
+        "style": "esriSFSSolid"
+      }
+    },
+    {
+      "name": "Spread Break Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/14",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "spreadnumber",
+            "textsearchlabel": "Spread by Number",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "LABEL_1",
+                    "label": "LABEL_1",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": 1
+                  },
+                  "prompt": "Begin Spread =",
+                  "textsearchhint": "Begin Spread 3",
+                  "sqltext": "LABEL_1 = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "LABEL_1",
+                  "required": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "NUM",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "STATE",
+            "alias": "STATE"
+          },
+          {
+            "name": "COUNTY",
+            "alias": "COUNTY"
+          },
+          {
+            "name": "LEGAL_LBL",
+            "alias": "LEGAL_LBL"
+          },
+          {
+            "name": "NUM",
+            "alias": "NUM",
+            "isnumber": true
+          },
+          {
+            "name": "LABEL_1",
+            "alias": "LABEL_1"
+          },
+          {
+            "name": "LABEL_2",
+            "alias": "LABEL_2"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        }
+      }
+    },
+    {
+      "name": "HDD Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/15",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "hddsworking",
+            "textsearchlabel": "Search by Name",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "NAME",
+                    "label": "NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "NAME =",
+                  "textsearchhint": "BAD RIVER",
+                  "sqltext": "NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "NAME"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "PNT",
+            "alias": "PNT",
+            "isnumber": true
+          },
+          {
+            "name": "NAME",
+            "alias": "NAME"
+          },
+          {
+            "name": "DESC_",
+            "alias": "DESC_"
+          },
+          {
+            "name": "CUR_DATE",
+            "alias": "CUR_DATE",
+            "isdate": true
+          },
+          {
+            "name": "STATUS",
+            "alias": "STATUS"
+          },
+          {
+            "name": "VERSION",
+            "alias": "VERSION"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          0,
+          0,
+          128,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            0,
+            0,
+            128,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid",
+          "marker": null
+        }
+      }
+    },
+    {
+      "name": "Access Road Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/16",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "carID",
+            "textsearchlabel": "Search by CAR_ID",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "CAR_ID",
+                    "label": "CAR_ID",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "CAR_ID =",
+                  "textsearchhint": "CAR-002A",
+                  "sqltext": "CAR_ID = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "CAR_ID"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "CAR_ID",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "CAR_ID",
+            "alias": "CAR_ID"
+          },
+          {
+            "name": "STATE",
+            "alias": "STATE"
+          },
+          {
+            "name": "LENGTH_FT",
+            "alias": "LENGTH_FT",
+            "isnumber": true
+          },
+          {
+            "name": "LENGTH_MI",
+            "alias": "LENGTH_MI",
+            "isnumber": true
+          },
+          {
+            "name": "COUNTY",
+            "alias": "COUNTY"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS"
+          },
+          {
+            "name": "CLASS",
+            "alias": "CLASS"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          75,
+          172,
+          198,
+          143
+        ],
+        "width": 7.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid",
+        "marker": null
+      }
+    },
+    {
+      "name": "Auxiliary Facility Search",
+      "url": "https://gis.exp.com/exp/rest/services/keystone_xl/kxl_esearch/MapServer/18",
+      "definitionexpression": "",
+      "spatialsearchlayer": false,
+      "export2Csv": false,
+      "export2Geo": false,
+      "export2FC": false,
+      "zoomScale": 10000,
+      "forceZoomScale": false,
+      "shareResult": false,
+      "addToAttrib": false,
+      "expressions": {
+        "expression": [
+          {
+            "alias": "facSearch",
+            "textsearchlabel": "Search by Name",
+            "values": {
+              "value": [
+                {
+                  "fieldObj": {
+                    "name": "NAME",
+                    "label": "NAME",
+                    "shortType": "string",
+                    "type": "esriFieldTypeString"
+                  },
+                  "valueObj": {
+                    "value": ""
+                  },
+                  "prompt": "NAME =",
+                  "textsearchhint": "CC01 SITE 1",
+                  "sqltext": "NAME = '[value]'",
+                  "operation": "stringOperatorIs",
+                  "uniquevalsfromfield": "NAME"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "titlefield": "NAME",
+      "fields": {
+        "all": false,
+        "field": [
+          {
+            "name": "ACRES",
+            "alias": "ACRES",
+            "isnumber": true
+          },
+          {
+            "name": "FAC_TYPE",
+            "alias": "FAC_TYPE",
+            "isnumber": true
+          },
+          {
+            "name": "NAME",
+            "alias": "NAME"
+          },
+          {
+            "name": "COMMENTS",
+            "alias": "COMMENTS"
+          },
+          {
+            "name": "STATUS",
+            "alias": "STATUS"
+          },
+          {
+            "name": "NEAREST_MP",
+            "alias": "NEAREST_MP",
+            "isnumber": true
+          },
+          {
+            "name": "WMS",
+            "alias": "WMS"
+          },
+          {
+            "name": "FAC_ID",
+            "alias": "FAC_ID"
+          },
+          {
+            "name": "PRJTRACTNO",
+            "alias": "PRJTRACTNO"
+          }
+        ]
+      },
+      "links": {
+        "link": []
+      },
+      "orderByFields": [],
+      "showattachments": false,
+      "layersymbolfrom": "layer",
+      "symbology": {
+        "color": [
+          155,
+          187,
+          89,
+          128
+        ],
+        "outline": {
+          "color": [
+            115,
+            140,
+            61,
             255
           ],
           "width": 1.5,
